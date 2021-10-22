@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1"
+		/>
+		<link rel="stylesheet" href="../styles.css" />
+		<title>Converter</title>
+	</head>
+	<body>
+		<div class="container-flex">
+			<h2 class="title">Length</h2>
+			<button class="btn-back" id="btn-back">Go Back</button>
+			<form class="form-flex" id="form">
+				<div class="form-item-flex item1">
+					<label class="flex-label" for="params-1">Choose parameters</label>
+
+					<select class="flex-select" name="params-1" id="params-1">
+						<option value="inch">Inch</option>
+						<option value="foot">Foot</option>
+						<option value="yard">Yard</option>
+						<option value="mile">Mile</option>
+					</select>
+
+					<input
+						class="flex-input"
+						type="text"
+						id="num-1"
+						placeholder="Enter a number"
+					/>
+				</div>
+				<div class="form-item-flex item3">
+					<button class="result-btn" type="submit">Show Results</button>
+				</div>
+				<div class="form-item-flex item2">
+					<label class="flex-label" for="params-2">Choose parameters</label>
+
+					<select class="flex-select" name="params-2" id="params-2">
+						<option value="millimeter">Millimeter</option>
+						<option value="centimeter">Centimeter</option>
+						<option value="meter">Meter</option>
+						<option value="kilometer">Kilometer</option>
+					</select>
+
+					<input
+						class="flex-input"
+						type="text"
+						id="num-2"
+						placeholder="Enter a number"
+					/>
+				</div>
+			</form>
+
+			<ul id="results"></ul>
+			<div class="btn-div">
+				<button class="btn-delete" type="button" id="btn-delete">
+					Delete Results
+				</button>
+			</div>
+		</div>
+
+		<script src="../js/length.js"></script>
+	</body>
+</html>

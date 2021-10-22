@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; connect-src https: "
+		/>
+
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1"
+		/>
+		<link rel="stylesheet" href="../styles.css" />
+		<title>Gold Price Calculator</title>
+	</head>
+	<body>
+		<div class="container-flex gold-flex">
+			<h2>Gold Price Calculator</h2>
+			<button class="btn-back btn-back-gold" id="btn-back">Go Back</button>
+
+			<section class="flex-section">
+				<form class="form-flex-gold" id="calculate-form">
+					<div>
+						<label for="params">Purity</label>
+						<select name="params" id="params">
+							<option value="9K">9K(37.5% Gold)</option>
+							<option value="10K">10K(41.67% Gold)</option>
+							<option value="12K">12K(50% Gold)</option>
+							<option value="14K">14K(58.33% Gold)</option>
+							<option value="18K">18K(75% Gold)</option>
+							<option value="22K">22K(91.67% Gold)</option>
+							<option value="24K">24K(99.99% Gold)</option>
+						</select>
+					</div>
+					<div>
+						<label for="num">Weight of the item</label>
+						<input type="text" id="num" placeholder="Enter a number" required />
+					</div>
+					<div>
+						<button class="result-btn" type="submit">Show Result</button>
+					</div>
+				</form>
+			</section>
+			<section class="flex-section gold-flex-section">
+				<div id="calc-result"></div>
+				<div>
+					<button class="btn-delete" type="button" id="delete-btn">
+						Delete Results
+					</button>
+				</div>
+				<div>
+					<button class="btn-update" id="price-update">
+						Update Gold Price
+					</button>
+				</div>
+				<div id="gold-price"></div>
+			</section>
+			<section class="flex-section">
+				<form class="form-flex-gold" id="history-price-form">
+					<div>
+						<label for="historical-price">Get Historical Gold Price</label>
+						<input
+							type="date"
+							id="historical-price"
+							name="historical-price"
+							min="1968-01-01"
+						/>
+					</div>
+					<div>
+						<button class="btn-history" id="history-price" type="submit">
+							Get Price
+						</button>
+					</div>
+				</form>
+			</section>
+		</div>
+		<script src="../js/goldPrice.js"></script>
+	</body>
+</html>

@@ -1,0 +1,250 @@
+body {
+	margin: 0;
+	text-align: center;
+	background: #d3d3d3;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+	background: #bdc3c7;
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+/*-----Main Page-----*/
+
+#container-flex {
+	width: 95%;
+	max-width: 800px;
+	height: 500px;
+	margin: 1em auto 0;
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.flex-item {
+	width: 95%;
+	height: 200px;
+	margin: 0 auto;
+	background: #bdc3c7;
+}
+
+.btn {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background: #36454f;
+	font-size: 1.3em;
+	color: #fdfefe;
+	padding: 0.5em;
+	border: 0;
+}
+
+.btn:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+#gold-price-btn {
+	margin-top: 3.5em;
+}
+
+@media (max-width: 600px) {
+	#container-flex {
+		margin-top: 2em;
+	}
+	#btn-group-control {
+		width: 95%;
+		height: 200px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	#gold-price-btn {
+		margin: 2.5em;
+	}
+	.flex-item {
+		height: 100px;
+	}
+	.converter {
+		height: 300px;
+	}
+	.btn {
+		font-size: 0.8em;
+	}
+}
+/*-----Area, Length, Volume, Weight Pages  */
+
+.container-flex {
+	width: 95%;
+	height: 600px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+.form-flex {
+	width: 100%;
+	height: 300px;
+	margin: 3em auto;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form-item-flex {
+	width: 30%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+	background: #bdc3c7;
+}
+
+.result-btn,
+.btn-back,
+.btn-delete,
+.btn-update,
+.btn-history {
+	background: #36454f;
+	border: 0;
+	font-size: 1em;
+	color: #fdfefe;
+}
+
+.result-btn:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+.btn-back:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+.btn-delete:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+
+@media (max-width: 542px) {
+	.container-flex {
+		height: 700px;
+	}
+
+	.weight {
+		height: 850px;
+	}
+	.form-flex {
+		width: 100%;
+		height: 400px;
+		margin: 3em auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-item-flex {
+		width: 60%;
+		height: 100px;
+		padding: 0.1em;
+	}
+
+	.flex-label,
+	.flex-select,
+	.flex-input {
+		width: 60%;
+	}
+
+	ul {
+		width: 95%;
+	}
+}
+
+/*-----Temp Page-----*/
+.temp-flex {
+	height: 500px;
+}
+
+.flex-form {
+	width: 95%;
+	height: 300px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form-flex-item {
+	background-color: #bdc3c7;
+	padding: 1.5em;
+}
+
+.temp > li {
+	padding: 1em;
+}
+
+@media (max-width: 690px) {
+	.flex-form {
+		flex-direction: column;
+	}
+}
+
+/*-----Gold Price Page-----*/
+.gold-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.btn-back-gold {
+	width: 20%;
+	margin: 0 auto;
+}
+.btn-history:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+
+.btn-update:hover {
+	background: #abb2b9;
+	cursor: pointer;
+}
+.flex-section {
+	width: 95%;
+	height: 150px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+	background: #bdc3c7;
+}
+
+.form-flex-gold {
+	width: 100%;
+	height: 140px;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media (max-width: 613px) {
+	.form-flex-gold {
+		flex-direction: column;
+	}
+	.gold-flex-section {
+		display: flex;
+		flex-direction: column;
+	}
+}

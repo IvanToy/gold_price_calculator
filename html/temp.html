@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1"
+		/>
+		<link rel="stylesheet" href="../styles.css" />
+		<title>Converter</title>
+	</head>
+
+	<body>
+		<div class="container-flex temp-flex">
+			<h2>Temperature</h2>
+			<button class="btn-back" id="btn-back">Go Back</button>
+
+			<form class="flex-form" id="form">
+				<div class="form-flex-item">
+					<label for="params">Choose parameter</label>
+					<select name="params" id="params">
+						<option value="celsius">Celsius</option>
+						<option value="fahrenheit">Fahrenheit</option>
+					</select>
+				</div>
+				<div class="form-flex-item">
+					<input
+						type="text"
+						id="num"
+						placeholder="Please enter a number"
+						required
+					/>
+				</div>
+				<div class="form-flex-item">
+					<button class="result-btn" class="form-flex-item" type="submit">
+						Show Results
+					</button>
+				</div>
+			</form>
+
+			<ul class="temp" id="result"></ul>
+			<div class="btn-div">
+				<button class="btn-delete" type="button" id="btn-delete">
+					Delete Results
+				</button>
+			</div>
+		</div>
+		<script src="../js/temp.js"></script>
+	</body>
+</html>

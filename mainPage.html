@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1"
+		/>
+
+		<link rel="stylesheet" href="styles.css" />
+		<title>Gold Price Calculator</title>
+	</head>
+
+	<body>
+		<section id="container-flex">
+			<h2 id="main-title">Gold Price Calculator</h2>
+
+			<div class="flex-item" id="gold-price-page">
+				<button class="btn" id="gold-price-btn">Gold Price Calculator</button>
+			</div>
+
+			<div class="flex-item converter">
+				<h3 id="title">Units Converter</h3>
+				<div id="btn-group-control">
+					<button class="btn btn-group" id="length-btn">Length</button>
+					<button class="btn btn-group" id="temp-btn">Temperature</button>
+					<button class="btn btn-group" id="area-btn">Area</button>
+					<button class="btn btn-group" id="weight-btn">Weight</button>
+					<button class="btn btn-group" id="volume-btn">Volume</button>
+				</div>
+			</div>
+		</section>
+		<script src="mainPage.js"></script>
+	</body>
+</html>
