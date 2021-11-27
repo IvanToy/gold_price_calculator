@@ -82,122 +82,6 @@ li {
 		font-size: 0.8em;
 	}
 }
-/*-----Area, Length, Volume, Weight Pages  */
-
-.container-flex {
-	width: 95%;
-	height: 600px;
-	max-width: 800px;
-	margin: 0 auto;
-	padding-bottom: 1em;
-}
-.form-flex {
-	width: 100%;
-	height: 300px;
-	margin: 3em auto;
-	display: flex;
-	justify-content: center;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.form-item-flex {
-	width: 30%;
-	height: 150px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	justify-content: space-around;
-	align-items: center;
-	background: #bdc3c7;
-}
-
-.result-btn,
-.btn-back,
-.btn-delete,
-.btn-update,
-.btn-history {
-	background: #36454f;
-	border: 0;
-	font-size: 1em;
-	color: #fdfefe;
-}
-
-.result-btn:hover {
-	background: #abb2b9;
-	cursor: pointer;
-}
-.btn-back:hover {
-	background: #abb2b9;
-	cursor: pointer;
-}
-.btn-delete:hover {
-	background: #abb2b9;
-	cursor: pointer;
-}
-
-@media (max-width: 542px) {
-	.container-flex {
-		height: 700px;
-	}
-
-	.weight {
-		height: 850px;
-	}
-	.form-flex {
-		width: 100%;
-		height: 400px;
-		margin: 3em auto;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.form-item-flex {
-		width: 60%;
-		height: 100px;
-		padding: 0.1em;
-	}
-
-	.flex-label,
-	.flex-select,
-	.flex-input {
-		width: 60%;
-	}
-
-	ul {
-		width: 95%;
-	}
-}
-
-/*-----Temp Page-----*/
-.temp-flex {
-	height: 500px;
-}
-
-.flex-form {
-	width: 95%;
-	height: 300px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.form-flex-item {
-	background-color: #bdc3c7;
-	padding: 1.5em;
-}
-
-.temp > li {
-	padding: 1em;
-}
-
-@media (max-width: 690px) {
-	.flex-form {
-		flex-direction: column;
-	}
-}
 
 /*-----Gold Price Page-----*/
 .gold-flex {
@@ -208,17 +92,30 @@ li {
 
 .btn-back-gold {
 	width: 20%;
+	background: #36454f;
+	color: #fdfefe;
+	border: 0;
 	margin: 0 auto;
 }
-.btn-history:hover {
+.btn-history,
+.btn-update,
+.result-btn,
+.btn-delete {
+	width: 100%;
+	background: #36454f;
+	color: #fdfefe;
+	border: 0;
+	margin: 0 auto;
+}
+.btn-back-gold:hover,
+.btn-history:hover,
+.btn-update:hover,
+.result-btn:hover,
+.btn-delete:hover {
 	background: #abb2b9;
 	cursor: pointer;
 }
 
-.btn-update:hover {
-	background: #abb2b9;
-	cursor: pointer;
-}
 .flex-section {
 	width: 95%;
 	height: 150px;

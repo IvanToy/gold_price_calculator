@@ -25,26 +25,6 @@ app.on("ready", function () {
 
 process.platform === "win32" && Menu.setApplicationMenu(null);
 
-ipcMain.on("load-length-page", (event, args) => {
-	mainWindow.loadFile(args);
-});
-
-ipcMain.on("load-temp-page", (event, args) => {
-	mainWindow.loadFile(args);
-});
-
-ipcMain.on("load-area-page", (event, args) => {
-	mainWindow.loadFile(args);
-});
-
-ipcMain.on("load-weight-page", (event, args) => {
-	mainWindow.loadFile(args);
-});
-
-ipcMain.on("load-volume-page", (event, args) => {
-	mainWindow.loadFile(args);
-});
-
 ipcMain.on("load-main-page-back", (event, args) => {
 	mainWindow.loadFile(args);
 });

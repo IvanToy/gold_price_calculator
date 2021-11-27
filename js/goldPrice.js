@@ -1,26 +1,19 @@
-const { TouchBarOtherItemsProxy } = require("electron");
 const electron = require("electron");
 const { ipcRenderer } = electron;
-/*-----Button leading back to main page----- */
+
 const buttonToMainPage = document.querySelector("#btn-back");
 buttonToMainPage.addEventListener("click", toMainPage);
 function toMainPage() {
 	ipcRenderer.send("load-main-page-back", "mainPage.html");
 }
-/*-----Button leading back to main page----- */
 
-/*-----getting calculate form, history price form(past gold prices), calculation result div(where result of
-calculation is displayed) ,button to delete result(setting it to display none), update button----- */
 const calculateForm = document.getElementById("calculate-form");
 const deleteResultBtn = document.getElementById("delete-btn");
 const updatePriceBtn = document.getElementById("price-update");
 const historyPriceFrom = document.getElementById("history-price-form");
 const calculationResult = document.getElementById("calc-result");
 deleteResultBtn.style.display = "none";
-/*-----getting calculate form, history price form(past gold prices), calculation result div(where result of
-calculation is displayed) ,button to delete result(setting it to display none), update button----- */
 
-/*-----Using api to get current and past gold prices.Setting up request to api -----*/
 var myHeaders = new Headers();
 myHeaders.append("x-access-token", "goldapi-1fozfqskry5yi04-io");
 myHeaders.append("Content-Type", "application/json");
@@ -32,15 +25,12 @@ var requestOptions = {
 };
 
 const url = "https://www.goldapi.io/api/XAU/USD";
-/*-----Using api to get current and past gold prices.Setting up request to api -----*/
 
-/*-----Making api call using async function and passing url as an arg -----*/
 async function getGoldPrice(url) {
-	//try to get data pertaining to gold prices and format it to json. Destruct json to get price and date;
 	try {
 		let data = await fetch(url, requestOptions);
 		let { price, date } = await data.json();
-		//displaying price of the gold on the page;
+
 		let goldPrice = document.getElementById("gold-price");
 		url.length === 34
 			? (goldPrice.innerText = `Current gold price:  ${price}$`)
@@ -54,9 +44,7 @@ async function getGoldPrice(url) {
 	}
 }
 getGoldPrice(url);
-/*-----Making api call using async function and passing url as an arg -----*/
 
-/*Calculating anf displaying the result */
 class priceCalculation {
 	constructor(weight, price) {
 		this.weight = weight;
@@ -118,27 +106,20 @@ function resultDisplay(e) {
 		)}$`;
 		console.log(resultOfCalculation);
 		deleteResultBtn.style.display = "inline";
+		document.getElementById("num").value = "";
 	}
 }
-/*Calculating anf displaying the result */
 
-/*-----removing results from the page----- */
 deleteResultBtn.addEventListener("click", () => {
 	calculationResult.innerText = "";
 	deleteResultBtn.style.display = "none";
 });
-/*-----removing results from the page----- */
 
-/*-----updating the price----- */
 updatePriceBtn.addEventListener("click", () => getGoldPrice(url));
-/*-----updating the price----- */
 
-/*-----setting max attribute of date's input filed to current day----- */
 historicalGoldPrice = document.getElementById("historical-price");
 historicalGoldPrice.max = new Date().toISOString().split("T")[0];
-/*-----setting max attribute of date's input filed to current day----- */
 
-/*-----getting historical price of gold----- */
 historyPriceFrom.addEventListener("submit", historyPrice);
 
 function historyPrice(e) {
@@ -154,4 +135,3 @@ function historyPrice(e) {
 		historicalPrice = document.getElementById("historical-price").value = "";
 	}
 }
-/*-----getting historical price of gold----- */
